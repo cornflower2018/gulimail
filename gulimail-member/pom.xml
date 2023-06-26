@@ -14,10 +14,16 @@
     <name>gulimail-member</name>
     <description>gulimail-member</description>
     <properties>
-        <java.version>8</java.version>
+        <java.version>1.8</java.version>
         <spring-cloud.version>2021.0.3</spring-cloud.version>
     </properties>
     <dependencies>
+        <!--客户端负载均衡loadbalancer-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-loadbalancer</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>com.atguigu.gulimail</groupId>
             <artifactId>gulimail-common</artifactId>
@@ -36,6 +42,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.atguigu.gulimail</groupId>
+            <artifactId>gulimail-coupon</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
     <dependencyManagement>
